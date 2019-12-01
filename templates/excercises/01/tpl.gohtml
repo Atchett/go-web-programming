@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Academic Year</td>
+                <td>Semester</td>
+                <td>Courses</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .}}
+                <tr>
+                    <td>{{.AcaYear}}</td>
+                    <td>{{.Fall.Term}}</td>
+                    <td>
+                        <table>
+                            {{range .Fall.Courses}}
+                            <tr>
+                                <td>{{.Number}}</td>
+                                <td>{{.Name}}</td>
+                                <td>{{.Units}}</td>
+                            </tr>
+                            {{end}}
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{.AcaYear}}</td>
+                    <td>{{.Spring.Term}}</td>
+                    <td>
+                        <table>
+                            {{range .Spring.Courses}}
+                            <tr>
+                                <td>{{.Number}}</td>
+                                <td>{{.Name}}</td>
+                                <td>{{.Units}}</td>
+                            </tr>
+                            {{end}}
+                        </table>
+                    </td>
+                </tr>
+            {{end}}
+        </tbody>
+
+    </table>
+
+</body>
+</html>

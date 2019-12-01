@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>functions</title>
+</head>
+<body>
+	<ul>
+		{{range .Wisdom}}
+		<li>{{upCase .Name}} - {{fThreeChar .Name}}</li>
+		{{end}}
+	</ul>
+	<ul>
+		{{range .Transport}}
+		<li>{{upCase .Manufacturer}} - {{fThreeChar .Manufacturer}}</li>
+		{{end}}
+	</ul>
+	
+</body>
+</html>

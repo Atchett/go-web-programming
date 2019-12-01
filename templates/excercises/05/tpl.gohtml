@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSV Data</title>
+</head>
+<body>
+	
+	<table border="1">
+		<thead>
+			<td>Date</td>
+			<td>Open</td>
+			<td>High</td>
+			<td>Low</td>
+			<td>Close</td>
+			<td>Volume</td>
+			<td>Adj Close</td>
+		</thead>
+		<tbody>
+		{{range .}}
+			<tr>
+				<td>{{.Date}}</td>
+				<td>{{.Open}}</td>
+				<td>{{.High}}</td>
+				<td>{{.Low}}</td>
+				<td>{{.Close}}</td>
+				<td>{{.Volume}}</td>
+				<td>{{.AdjClose}}</td>
+			</tr>
+		{{end}}
+		</tbody>
+	</table>
+
+</body>
+</html>
